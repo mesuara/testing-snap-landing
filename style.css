@@ -20,55 +20,61 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo img{
-    width: 50%;
-    padding-left: 10px;
-}
-.navbar .nav-links {
-    display: flex;
-    gap: 20px;
-}
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-.navbar .auth-buttons {
-    display: flex;
-    gap: 15px;
-    padding-right: 10px;
-}
-.auth-buttons .btn {
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-}
-.btn-signin {
-    background: none;
-    color: #333;
-    border: 1px solid #333;
-}
-.btn-signup {
-    background: #28a745;
-    color: white;
-    border: none;
-}
-.btn-signup:hover {
-    background: #218838;
-}
+
+
 .hero {
     width: 100%;
     text-align: center;
     background: url('food-set.avif') no-repeat center center/cover;
-    height: 400px;
+    /* font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal; */
+    text-shadow: 1px 1px 2px black; /* Adds an outline effect */
+    font-size: 5em;
+    /* height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #F8F9FA;
     font-size: 36px;
     font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); */
+}
+
+p.title.is-1.hero-title{
+    font-size: 1em;
+}
+
+.is-primary{
+    background-color: #f27041 !important;
+    color: white !important;
+}
+
+.field.is-grouped.hero-input {
+    width: 100%;
+    justify-content: center;
+   
+}
+p.control.input-nested-hero{
+    width: 60%;
+}
+
+
+
+body > section > div > div > p.control.input-nested-hero > input{
+    color: black;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.9038209033613446) 96%, rgba(248,143,106,1) 100%, rgba(246,116,69,0.7077424719887955) 100%);
+}
+
+input::placeholder{
+    color: gray !important;
+    opacity: 1 !important;
+    font-style: italic;
+}
+#navbarBasicExample > div > div > div > a.button.is-primary.is-rounded{
+    background-color: #f27041;
+    color: white;
 }
 .container {
     /* max-width: 600px; */
@@ -128,37 +134,84 @@ h1 {
 p {
     color: #555;
 }
-.email-input {
-    width: 60%;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+body > section.section.full-page-section > div {
+    background: #F8F9FA;
 }
-.subscribe-btn {
-    padding: 10px 20px;
-    background: black;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.section.full-page-section{
+    padding: 0;
 }
-.subscribe-btn:hover {
-    background: #218838;
-}
-.social-icons {
+.full-page-section {
+    /* min-height: 100vh;  */
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center; /* Center content */
+    overflow: hidden;
+    background: #F8F9FA;
 }
-.social-icons a {
-    color: #555;
-    font-size: 24px;
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Subtle color */
 }
-.social-icons a:hover {
-    color: #28a745;
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar (Chrome, Safari) */
+}
+
+.category-card {
+    min-width: 320px;
+    flex-shrink: 0;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+body > section.section.full-page-section > div > h2{
+    padding-top: 20px;
+}
+
+
+/* Scrollbar for Chrome, Edge, and Safari */
+.scroll-container::-webkit-scrollbar {
+    height: 6px; /* Thin scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Scrollbar color */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Lighter track */
+}
+
+.footer {
+    width: 100vw !important; /* Ensures full page width */
+    min-height: 300px; /* Set a proper height */
+    padding:0 !important; /* Adds spacing */
+    background-color: gray !important;
+
+}
+
+.footer .container {
+    width: 100% !important; /* Make sure it spans the full width */
+    max-width: none; /* Remove any restrictions */
+    background-color: gray;
+    padding-top: 20px;
 }
